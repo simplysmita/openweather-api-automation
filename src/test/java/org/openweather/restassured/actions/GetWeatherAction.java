@@ -7,6 +7,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
+import org.apache.commons.lang3.StringUtils;
 import org.openweather.model.WeatherResponse;
 import org.openweather.util.EnvironmentSelector;
 
@@ -23,8 +24,12 @@ public class GetWeatherAction {
     @Step
     public void setApiKeyAndCityNameInQueryParam(String apiKey, String cityName) {
         queryParams = new HashMap<>();
-        queryParams.put("appid", apiKey);
-        queryParams.put("q", cityName);
+        if(StringUtils.isNotEmpty(apiKey)){
+            queryParams.put("appid", apiKey);
+        }
+        if(StringUtils.isNotEmpty(cityName)){
+            queryParams.put("q", cityName);
+        }
     }
 
     @Step
