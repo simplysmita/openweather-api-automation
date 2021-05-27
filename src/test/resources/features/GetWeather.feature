@@ -11,3 +11,5 @@ Feature: Get Weather
       | c4c876061b4c655c1afc20cb19f2f5d3 | Chennai   | 200        |
       | c4c876061b4c655c1afc20cb19f2f5d  | Bengaluru | 401        |
       | c4c876061b4c655c1afc20cb19f2f5d3 | Bengalur  | 404        |
+      | c4c876061b4c655c1afc20cb19f2f5d3 |           | 400        |
+      |                                  | Bengaluru | 401        |
