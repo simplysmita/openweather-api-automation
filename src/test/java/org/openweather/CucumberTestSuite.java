@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "classpath:features",
-        glue={"org.openweathermap.cucumber.steps"},
-        plugin = {"pretty","html:target/reports/html"}
+        glue={"org.openweather.cucumber.steps"},
+        plugin = {"pretty","html:target/reports/reports.html"}
 )
 public class CucumberTestSuite {
 }
