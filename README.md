@@ -8,12 +8,22 @@ I have automated the Get Weather Data By CityName.
 
 Prerequisites:
 ---------------
-*	Java jdk-1.8 or higher
+*	Java 8 or higher
 *	Apache Maven 3 or higher
+*   IDE(Eclipse or Intellij) With Java 8 or higher
 
-Execution:
----------------
+
+Execution From CommandLine:
+---------------------------
 *	Clone the repository.
 *	Open command prompt and navigate to root directory.
 *	run the command "**mvn clean verify**"
+*   The Serenity reports can be found in "**target/site/serenity/index.html**"
+
+
+Execution From IDE:
+---------------------------
+*	Clone the repository to your local workspace.
+*	Open the project as a Maven project in your IDE.
+*	Run the Maven command "**clean verify**"
 *   The Serenity reports can be found in "**target/site/serenity/index.html**"
