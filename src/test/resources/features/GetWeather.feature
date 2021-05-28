@@ -6,10 +6,10 @@ Feature: Get Weather
     Then API sends "<statusCode>" as status code in response
     And if status is 200 then Name in response matches "<cityName>"
     Examples:
-      | apiKey                           | cityName  | statusCode |
-      | c4c876061b4c655c1afc20cb19f2f5d3 | Bengaluru | 200        |
-      | c4c876061b4c655c1afc20cb19f2f5d3 | Chennai   | 200        |
-      | c4c876061b4c655c1afc20cb19f2f5d  | Bengaluru | 401        |
-      | c4c876061b4c655c1afc20cb19f2f5d3 | Bengalur  | 404        |
-      | c4c876061b4c655c1afc20cb19f2f5d3 |           | 400        |
-      |                                  | Bengaluru | 401        |
+      | scenarioName     | apiKey                           |  | cityName  | statusCode |
+      | Success          | c4c876061b4c655c1afc20cb19f2f5d3 |  | Bengaluru | 200        |
+      | Success          | c4c876061b4c655c1afc20cb19f2f5d3 |  | Chennai   | 200        |
+      | Invalid API Key  | c4c876061b4c655c1afc20cb19f2f5d  |  | Bengaluru | 401        |
+      | Invalid City     | c4c876061b4c655c1afc20cb19f2f5d3 |  | Bengalur  | 404        |
+      | Missing CityName | c4c876061b4c655c1afc20cb19f2f5d3 |  |           | 400        |
+      | Missing API Key  |                                  |  | Bengaluru | 401        |
